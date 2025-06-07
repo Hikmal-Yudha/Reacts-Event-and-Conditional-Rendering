@@ -21,10 +21,11 @@ function MadeGoal() {
 
 function Goal(props) {
   const isGoal = props.isGoal;
-  if (isGoal) {
-    return <MadeGoal />;
-  }
-  return <MissedGoal />;
+  //  if (isGoal) {
+  //    return <MadeGoal />;
+  //  }
+  //  return <MissedGoal />;
+  return <>{isGoal ? <MadeGoal /> : <MissedGoal />}</>;
 }
 
 function Garage(props) {
@@ -42,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <Football />
-      <Goal isGoal={false} />
+      <Goal isGoal={true} />
       <Garage cars={cars} />
     </div>
   );
